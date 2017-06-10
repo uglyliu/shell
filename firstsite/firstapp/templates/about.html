@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+{% block title %}
+About Me
+{% endblock %}
+{% block body %}
+		<div class="container" id='post'>
+      <div class="row">
+    			<div class="col-md-12">
+            <article class="article the-font">
+			<div class="comtainer">
+				<div class="row">
+					<div class="col-md-4">
+						<br>
+						<div align="center"><img src="http://img2.3lian.com/2014/c6/42/d/44.jpg" style="height:250px;width:250px;border-radius:130px;text-align:center" align="center"></div>
+						<br>
+						<p class="lead text-center"><strong>刘辉煌</strong></p>
+						<br>
+
+					</div>
+					<div class="col-md-8" style="line-height:40px;">
+						<h2>个人信息：</h2>
+						<hr>
+						<ul>
+							<li>姓名 ：刘辉煌</li>
+							<li>网名 ：Huihuang</li>
+							<li>年龄 ：18</li>
+							<li>居住地 ：北京</li>
+						</ul>
+						<h2>联系方式：</h2>
+						<hr>
+						<ul>
+							<li>EMAIL:<a href="#">不告诉你</a></li>
+							<li>QQ : 我不告诉你</li>
+							<li>TEL : 我不告诉你</li>
+						</ul>
+						<h2>个人技能：</h2>
+						<hr>
+						<ul>
+							<li>了解Python,Django</li>
+							<li>了解Bootstrap ,SegmenticUI等前端布局</li>
+							<li>了解jQuery</li>
+							<li>了解Mysql数据库</li>
+                            <li>半熟不熟自动化技术</li>
+                            <li>半熟不熟linux</li>
+                            <li>精通各种hello world</li>
+{#              <li>本博客源码：<a href="https://github.com/Bowenpy/web">https://github.com/Bowenpy/web</a></li>#}
+						</ul>
+						<h2>兴趣爱好：</h2>
+						<hr>
+						<ul>
+							<li>把妹</li>
+							<li>还是把妹</li>
+						</ul>
+					</div>
+					<hr>
+					<br>
+					<br>
+
+					</div>
+
+				</div>
+
+		</article>
+
+            <article class="article the-font">
+			<div class="ds-share flat" data-thread-key="{{ article.id }}" data-title="{{ article.title }}" data-images="http://www.youlanw.com/static/images/man.jpg" data-content="{{ article.content }}" data-url="article/{{ article.id }}">
+    <div class="ds-share-inline">
+      <div class="ds-share-icons-more">
+      </div>
+    </div>
+ </div>
+			<!-- 多说评论框 start -->
+<!-- 评论框 end -->
+<!-- UY BEGIN -->
+<div id="uyan_frame"></div>
+<script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js"></script>
+<!-- UY END -->
+		</article>
+    			</div>
+      </div>
+		</div>
+		{% endblock %}
