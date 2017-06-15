@@ -25,6 +25,8 @@ urlpatterns = [
     url(r'^$', index, name='index'),
     url(r'^index/', index, name='index'),
     url(r'^about/', about, name='about'),
+    url(r'^acc_login/',acc_login,name='acc_login'),
+    url(r'^acc_register/',acc_register,name='acc_register'),
     url(r'^blog/detail/(?P<page_num>\d+)$', detail_page, name='detail'),
     url(r'^(?P<tag>)$', categoty, name='categoty'),
 

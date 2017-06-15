@@ -1,11 +1,13 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 
 # Create your views here.
 from django.shortcuts import render
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from firstapp.models import Article, Category,Link
 from django.db.models.aggregates import Count
-
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth import authenticate,logout,login
+from django.contrib.auth.models import User
 
 def index(request):
     queruset = request.GET.get('tag')
@@ -48,3 +50,21 @@ def about(request):
 
 def link(request):
     return render(request,'index.html',{})
+
+def acc_login(request):
+    errors =  {}
+    if request.method == "POST":
+        username = request.POST.get("username")
+        password = request.POST.get("password")
+        user = authenticate(username=username,password=password)
+        print("auth res",user)
+        if user:
+            print("Authenticate success")
+            login(request,user)
+            return redirect("/admin")
+        else:
+            errors = {"error": "Wrong username or password!"}
+    return render(request, "login.html", errors)
+
+def acc_register(request):
+    return render(request,'register.html')

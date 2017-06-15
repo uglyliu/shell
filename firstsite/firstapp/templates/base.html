@@ -9,6 +9,7 @@
     <link rel="stylesheet" href={% static "css/font-bowen.css" %}>
     <link rel="stylesheet" href={% static "css/style.css" %}>
     <link rel="stylesheet" href={% static "css/code.css" %}>
+      <link rel="stylesheet" href={% static "css/common_form.css" %}>
     <!-- <link rel="stylesheet" href="http://picturebag.qiniudn.com/monokai.css"> -->
 	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"> -->
 	<!-- Custom styles for this template -->
@@ -31,7 +32,8 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand page-scroll" href="/">BOWEN</a>
+					<a class="navbar-brand page-scroll" href="/">Django</a>
+                    <a class="navbar-brand page-scroll" href="/">运维</a>
 				</div>
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -44,6 +46,12 @@
 						</li>
 						<li>
 							<a class="page-scroll" href="{% url 'about' %}">关于我</a>
+						</li>
+                        <li>
+							<a class="page-scroll" href="{% url 'acc_login' %}">登录</a>
+						</li>
+                        <li>
+							<a class="page-scroll" href="{% url 'acc_register' %}">注册</a>
 						</li>
 					</ul>
 				</div>
