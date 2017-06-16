@@ -1,10 +1,21 @@
 from django.db import models
+from django.contrib.auth.models import User
 from django.contrib import admin
 import datetime
 # Create your models here.
+
+
+class UserProfile(models.Model):
+    user = models.OneToOneField 
+    name = models.CharField(max_length=32)
+    def __str__(self):
+        return self.name
+
+
 class Article(models.Model):
     title = models.CharField(null=True,blank=True,max_length=500)
     comment = models.TextField(null=True)
+    author = models.ForeignKey("UserProfile",verbose_name="作者",null=True,blank=True)
     abstract = models.TextField(null=True)
     body = models.TextField(null=True)
     create_time = models.DateTimeField(blank=True,default=datetime.datetime.now)
